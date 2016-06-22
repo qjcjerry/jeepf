@@ -60,10 +60,15 @@
 	<!-- 设定主仓库，按设定顺序进行查找。 -->
 	<repositories>
 	
-		<repository>
+		<!--<repository>
 			<id>jeesite-repos</id>
 			<name>Jeesite Repository</name>
 			<url>http://maven.jeesite.com/nexus/content/groups/public</url>
+		</repository>-->
+		<repository>
+			<id>jeesite-repos</id>
+			<name>Jeesite Repository</name>
+			<url>http://git.oschina.net/thinkgem/repos/raw/master</url>
 		</repository>
 		
 	</repositories>
@@ -74,7 +79,7 @@
 		<pluginRepository>
 			<id>jeesite-repos</id>
 			<name>Jeesite Repository</name>
-			<url>http://maven.jeesite.com/nexus/content/groups/public</url>
+			<url>http://maven.sankuai.com/nexus/content/groups/public</url>
 		</pluginRepository>
 		
 	</pluginRepositories> 
@@ -534,6 +539,11 @@
 			<artifactId>analyzer</artifactId>
 			<version>2012_u6</version>
 		</dependency>
+		<!--<dependency>
+			<groupId>org.wltea.ik-analyzer</groupId>
+			<artifactId>ik-analyzer</artifactId>
+			<version>3.2.8</version>
+		</dependency>-->
 		<!-- GENERAL UTILS end -->
 		
 		<!-- CKFinder begin -->
@@ -579,9 +589,9 @@
 		
 		<!-- User Agent -->
 		<dependency>
-			<groupId>bitwalker</groupId>
+			<groupId>eu.bitwalker</groupId>
 			<artifactId>UserAgentUtils</artifactId>
-			<version>1.13</version>
+			<version>1.14</version>
 		</dependency>
 		
 		<!-- 自定义jar依赖包
@@ -876,6 +886,7 @@
 				<artifactId>maven-dependency-plugin</artifactId>
 				<version>2.5.1</version>
 			</plugin>
+
 		</plugins>
 	</build>
 	
@@ -913,7 +924,7 @@
 								<!-- oracle
 								<property name="dbunit.datatype" value="org.dbunit.ext.oracle.Oracle10DataTypeFactory" /> -->
 								
-								<property file="src/main/resources/jeesite.properties" />
+								<property file="src/main/resources/jeesite.properties"/>
 								<sql driver="${jdbc.driver}" url="${jdbc.url}" userid="${jdbc.username}" password="${jdbc.password}" 
 									onerror="continue" encoding="${project.build.sourceEncoding}">
 									<classpath refid="maven.test.classpath" />

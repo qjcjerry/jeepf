@@ -109,6 +109,8 @@ JeeSite 提供了常用工具进行封装，包括日志工具、缓存工具、
 5. 运行bin\run-tomcat7.bat或bin\run-jetty.bat，启动Web服务器（第一次运行，需要下载依赖jar包，请耐心等待）。
 6. 最高管理员账号，用户名：thinkgem 密码：admin
 
+--建库脚本 db\jeesite_mysql.sql, init-db.bat 不在bin\下,在db\下
+
 ## 常见问题
 
 1. 有时出现文字乱码：修改Tomcat的server.xml文件的Connector项，增加URIEncoding="UTF-8"
